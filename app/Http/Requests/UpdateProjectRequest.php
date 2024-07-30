@@ -29,7 +29,7 @@ class UpdateProjectRequest extends FormRequest
             'title' => ['required'],
             'description' => ['required', 'max:100'],
             'technologies' => ['nullable', 'exists:technologies,id'],
-            'types' => ['nullable', 'exists:types,id'],
+            'type_id' => ['nullable', 'exists:types,id'],
         ];
     }
 }

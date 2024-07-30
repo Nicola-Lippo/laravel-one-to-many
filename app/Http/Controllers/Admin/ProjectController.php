@@ -47,6 +47,7 @@ class ProjectController extends Controller
         $project->title = $data['title'];
         $project->description = $data['description'];
         $project->slug = $data['slug'];
+        $project->type_id = $data['type_id'];
         $project->save();
 
         //se esistono tecnologie crea la relazione con tabella pivot
