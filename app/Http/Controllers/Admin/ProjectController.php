@@ -7,6 +7,7 @@ use App\Models\Project;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Technology;
+use App\Models\type;
 //importo dal seeder per store
 use Illuminate\Support\Str;
 
@@ -59,9 +60,9 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Project $project, Technology $technology)
+    public function show(Project $project, Technology $technology, type $type)
     {
-        return view('admin.projects.show', compact('project', 'technology'));
+        return view('admin.projects.show', compact('project', 'technology', 'type'));
     }
 
     /**

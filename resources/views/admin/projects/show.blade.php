@@ -27,12 +27,15 @@
         </section>
         <section>
             <h4>Technologies</h4>
-
             <ul>
                 @foreach ($project->technologies as $technology)
                     <li>{{ $technology->name }}</li>
                 @endforeach
             </ul>
+        </section>
+        <section>
+            <h4>Type</h4>
+            <div>{{ $project->type?->name ?: 'Type non presente' }}</div>
         </section>
     </div>
 @endsection
