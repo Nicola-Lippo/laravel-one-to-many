@@ -35,10 +35,10 @@
                     <div class="mb-3">Types usati</div>
                     @foreach ($types as $type)
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="type-{{ $type->id }}"
-                                value="{{ $type->id }}" name="types[]"
-                                {{ in_array($type->id, old('types', [])) ? 'checked' : '' }}>
-                            <label class="form-check-label" for="tec-{{ $type->id }}">{{ $type->name }}</label>
+                            <input class="form-check-input" type="radio" id="type-{{ $type->id }}"
+                                value="{{ $type->id }}" name="type_id" {{-- $type-> comparazione con old('type_id') --}}
+                                {{ $type->id == old('type_id') ? 'checked' : '' }}>
+                            <label class="form-check-label" for="type-{{ $type->id }}">{{ $type->name }}</label>
                         </div>
                     @endforeach
                 </div>
